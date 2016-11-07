@@ -35,8 +35,8 @@ mongoose.connection.once("open", function(err){
 		
 		var bookSchema = mongoose.Schema({
 			
-			title: {type: String},
-			author: {type: String}
+			title: {type: String, unique:true},
+			author: {type: String, unique:true}
 			
 		});
 		
