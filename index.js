@@ -68,7 +68,7 @@ mongoose.connection.once("open", function(err){
 		
 		Book.findOne({title:searchTitle}, function(err, result){
 			
-			if(err){
+			if(err || !result ){
 				console.log(err);
 				return;
 			}
@@ -87,7 +87,7 @@ mongoose.connection.once("open", function(err){
 		
 		Book.findOne({author: searchAuthor}, function(err, result){
 			
-			if(err){
+			if(err || !result){
 				console.log(err);
 				return;
 			}
