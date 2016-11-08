@@ -58,6 +58,7 @@ mongoose.connection.once("open", function(err){
 			}
 		
 		});
+		res.json({a:"a"});
 	
 	});
 

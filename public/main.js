@@ -2,6 +2,8 @@ $(document).ready(function(){
 	
 	$("#submit").on("click", function(){
 		
+		if(!$("#authorInput").val().trim()===""&&!$("#titleInput").val().trim()==""){
+		
 		$.ajax({
 			
 			url:"/submit",
@@ -11,10 +13,16 @@ $(document).ready(function(){
 				author: $("#authorInput").val()
 			},
 			success: function(){
+				console.log("stored!");
 				$("p").html("book stored!");
 			}
 			
 		});
+		}
+		
+		else{
+			$("p").html("book not stored!");
+		}
 	});
 	
 	$("#title").on("click", function(){
