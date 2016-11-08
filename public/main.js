@@ -9,10 +9,12 @@ $(document).ready(function(){
 			data: {
 				title: $("#titleInput").val(),
 				author: $("#authorInput").val()
+			},
+			success: function(){
+				("p").html("book stored!");
 			}
 			
 		});
-		
 	});
 	
 	$("#title").on("click", function(){
