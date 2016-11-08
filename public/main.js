@@ -11,7 +11,7 @@ $(document).ready(function(){
 				author: $("#authorInput").val()
 			},
 			success: function(){
-				("p").html("book stored!");
+				$("p").html("book stored!");
 			}
 			
 		});
