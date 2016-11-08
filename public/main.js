@@ -2,7 +2,11 @@ $(document).ready(function(){
 	
 	$("#submit").on("click", function(){
 		
-		if(!$("#authorInput").val().trim()===""&&!$("#titleInput").val().trim()==""){
+		if($("#authorInput").val().trim() === "" || $("#titleInput").val().trim() === ""){
+			$("p").html("book not stored!");
+		}
+		
+		else{
 		
 		$.ajax({
 			
@@ -18,10 +22,7 @@ $(document).ready(function(){
 			}
 			
 		});
-		}
-		
-		else{
-			$("p").html("book not stored!");
+			
 		}
 	});
 	
