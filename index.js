@@ -71,7 +71,7 @@ mongoose.connection.once("open", function(err){
 			
 			if(err || !result ){
 				console.log(err);
-				return;
+				res.json({message:"not found"});
 			}
 			
 			res.json({title:result.title, author:result.author});
@@ -90,7 +90,7 @@ mongoose.connection.once("open", function(err){
 			
 			if(err || !result){
 				console.log(err);
-				return;
+				res.json({message:"not found"});
 			}
 			
 			res.json({title:result.title, author:result.author});
